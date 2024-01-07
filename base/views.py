@@ -19,4 +19,4 @@ from .models import *
 # Create your views here.
 def index(request):     
     #return HttpResponse("Emir Elçi'nin Kişisel Sayfası \n Meraba")
-    return render(request,'base/index.html')
+    return render(request,'index.html')
