@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base'
+    'dennisivy'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
