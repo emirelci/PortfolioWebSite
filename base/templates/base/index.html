@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Emir Elçi</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47692315-56"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-47692315-56');
+	</script>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+	<section class="s1">
+		<div class="main-container">
+			<div class="greeting-wrapper">
+				<h1>Hi, I'm Emir Elçi</h1>
+			</div>
+
+
+			<div class="intro-wrapper">
+				
+
+				<div class="left-column">
+					<img id="profile_pic" src="{% static 'images/Emir.jpg' %}">
+					<h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+
+					<div id="theme-options-wrapper">
+						<div data-mode="light" id="light-mode" class="theme-dot"></div>
+						<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+						<div data-mode="green" id="green-mode" class="theme-dot"></div>
+						<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+					</div>
+
+					
+				</div>
+
+				<div class="right-column">
+
+					<div id="preview-shadow">
+						<div id="preview">
+							<div id="corner-tl" class="corner"></div>
+							<div id="corner-tr" class="corner"></div>
+							<h3>What I Do</h3>
+							<p>I am currently studying Computer Engineering at Amasya University. I am improving myself in the field of Mobile and Games.</p>
+							<div id="corner-br" class="corner"></div>
+							<div id="corner-bl" class="corner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+
+			<div class="about-wrapper">
+				<div class="about-me">
+					<h4>More about me</h4>
+
+					<p>I live in Izmir, I was born in 2002 and I like to play games.</p>
+
+					<p>I am very eager to participate in projects in the future.</p>
+					<p> I want to be an Android developer or a Game Developer, I am improving myself in these subjects.</p>
+
+
+					<hr>
+
+					<h4 style="text-align: center;">MY INTERESTS</h4>					
+
+					<div id="skills">
+						<ul>
+							<li>Python</li>
+							<li>C</li>							
+							<li>C#</li>
+							<li>C++</li>
+						</ul>
+
+						<ul>
+							<li>KOTLIN</li>
+							<li>JAVA</li>
+							<li>HTML</li>
+							<li>CSS</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				
+				
+			</div>
+
+		</div>
+	</section>
+
+	
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+			<a href=""></a>
+			<h3 style="text-align: center;">Get In Touch</h3>
+
+			<form id="contact-form" method="POST" action="{% url 'send_email' %}">
+				{% csrf_token %}
+				<a name="contact"></a>
+
+				<label>Name</label>
+				<input required class="input-field" type="text" name="name">
+
+				<label>Subject</label>
+				<input required class="input-field" type="text" name="subject">
+
+				<label>Email</label>
+				<input required class="input-field" type="text" name="email">
+
+				<label>Message</label>
+				<textarea required class="input-field" name="message"></textarea>
+
+				<input id="submit-btn" type="submit" value="Send">
+			</form>
+		</div>
+	</section> 
+
+	<script type="text/javascript">
+		let static = "{% static 'css' %}"
+	</script>
+
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
